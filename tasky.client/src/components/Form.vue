@@ -21,7 +21,7 @@ const loading = ref(false);
 async function createTask() {
     loading.value = true;
     try {
-        const response = await axios.post(`${import.meta.env.VUE_APP_API_URL}/api/tasks/post`, {
+        const response = await axios.post(`https://tasky-brgf.onrender.com/api/tasks/post`, {
             name: taskName.value,
         });
         // Sucesso: exibe a mensagem e recarrega a página manualmente
