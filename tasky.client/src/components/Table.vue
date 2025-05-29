@@ -47,7 +47,7 @@ const selectedTaskId = ref(null); // Nova variável para armazenar o ID da taref
 
 const fetchTasks = async () => {
     try {
-        const res = await axios.get('http://localhost:8080/api/tasks');
+        const res = await axios.get('https://tasky-brgf.onrender.com/api/tasks');
         taskList.value = res.data;
     } catch (e) {
         console.error('Error fetching tasks:', e);
@@ -68,7 +68,7 @@ const openEditModal = (id) => {
 
 const deleteTask = async () => {
     try {
-        await axios.delete(`http://localhost:8080/api/tasks/delete/${selectedTaskId.value}`);
+        await axios.delete(`https://tasky-brgf.onrender.com/api/tasks/delete/${selectedTaskId.value}`);
         deleteModalVisible.value = false;
         await fetchTasks(); // Atualiza a lista após excluir
     } catch (e) {
@@ -78,7 +78,7 @@ const deleteTask = async () => {
 
 const editTask = async () => {
     try {
-        const response = await axios.patch(`http://localhost:8080/api/tasks/update/${selectedTaskId.value}`, {
+        const response = await axios.patch(`https://tasky-brgf.onrender.com/api/tasks/update/${selectedTaskId.value}`, {
             name: newTaskName.value
         });
         editModalVisible.value = false;
