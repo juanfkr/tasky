@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api/tasks": {
-        target: "http://localhost:8080",
+        target: "https://tasky-brgf.onrender.com",
         changeOrigin: true
       }
     }
