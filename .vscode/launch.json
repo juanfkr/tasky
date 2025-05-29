@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<tasky.api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.juan.tasky.api.Application",
+            "projectName": "tasky.api",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
